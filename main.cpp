@@ -27,7 +27,7 @@ public:
     // This will run when the class is deconstructed.
     ~Timer() {
         this->_end = hr_clock::now();
-        const std::chrono::duration<float> delta_t = (this->_end - this->_start)*100;
+        const std::chrono::duration<float> delta_t = (this->_end - this->_start)*1000;
 
         std::cout << "Code finished in " << delta_t.count() << "ms" << std::endl;
     }
